@@ -17,7 +17,9 @@ namespace FTicket.Services
         {
             try
             {
-                var storageAccount = CloudStorageAccount.Parse(@"DefaultEndpointsProtocol=https;AccountName=fiantest;AccountKey=VlKHocXZLL+0IQ/QNnQEny/KvaO5HsfSYlDPdsA0+yGUH0LPiiCURqN56lsAXMXNKdd3OoOFqIThHBxO7zyusA==;EndpointSuffix=core.windows.net");
+                string storageAccountKey = System.IO.File.ReadAllText(@"C:\Users\alastairwilkins\Documents\cloudkey.txt");
+
+                var storageAccount = CloudStorageAccount.Parse(storageAccountKey);
 
                 var tableClient = storageAccount.CreateCloudTableClient();
 
