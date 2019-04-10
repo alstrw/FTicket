@@ -1,2 +1,2 @@
 # FTicket
-A WPF internal support ticketing system using MVVM and Azure table storage.
+A test mockup, playing with Azure Table Storage and WPF MVVM pattern for an internal support ticketing system.
